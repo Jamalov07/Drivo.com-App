@@ -2,7 +2,7 @@
 let theme = document.querySelector(".theme");
 let mode = document.querySelector(".mode");
 let bottom = document.querySelectorAll(".bottom");
-
+let cards = document.querySelectorAll(".card");
 theme.addEventListener("click", () => {
   changeTheme();
 });
@@ -25,6 +25,11 @@ function changeTheme() {
     } else {
       bot.setAttribute("src", "./images/Iconwhite.svg");
     }
+  });
+  cards.forEach((card) => {
+    card.classList.toggle("bg-[#272727]");
+    card.classList.toggle("text-black");
+    card.classList.toggle("bg-[#F5F5F5]");
   });
 }
 
