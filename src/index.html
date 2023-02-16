@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="url-to-cdn/splide.min.css" />
+    <!-- <link rel="stylesheet" href="url-to-cdn/splide.min.css" /> -->
 
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -126,7 +126,7 @@
     <!-- modal -->
     <div class="modal text-black w-screen h-screen fixed hidden top-0 z-40">
       <div
-        class="modal-content w-[600px] h-[540px] bg-white rounded-[20px] mx-auto my-[12%] relative"
+        class="modal-content w-[600px] h-[540px] bg-white rounded-[20px] mx-auto my-[10%] relative"
       >
         <i
           class="cancellogin bx bx-x p-4 absolute rounded-full bg-[#f5f5f5] right-6 hover:font-bold top-6 active:bg-[#299764]"
@@ -312,24 +312,24 @@
           </div>
           <div class="change-buttons flex w-[45%] justify-between mx-auto">
             <button
-              class="py-3 px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-none active:bg-[#F5F5F5] active:text-black"
+              class="btns compact py-3 px-8 border-[1px] border-[#333333] active rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
             >
               Compact
             </button>
             <button
-              class="py-3 px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-none active:bg-[#F5F5F5] active:text-black"
+              class="btns sport py-3 px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
             >
               Sports cars
             </button>
             <button
-              class="py-3 px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-none active:bg-[#F5F5F5] active:text-black"
+              class="btns van py-3 px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
             >
               Vans
             </button>
           </div>
-          <div class="wrapper-cards pt-6 grid grid-cols-3 gap-28">
+          <div class="wrapper-cards pt-6 grid grid-cols-3 gap-10">
             <div
-              class="card text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Ford Fiesta</h1>
@@ -356,7 +356,7 @@
               </div>
             </div>
             <div
-              class="card text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Nissan Versa</h1>
@@ -383,7 +383,7 @@
               </div>
             </div>
             <div
-              class="card text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Toyota Corolla</h1>
@@ -410,7 +410,7 @@
               </div>
             </div>
             <div
-              class="card text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Nissan Rogue</h1>
@@ -437,7 +437,7 @@
               </div>
             </div>
             <div
-              class="card text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Chevy Traverse</h1>
@@ -464,7 +464,7 @@
               </div>
             </div>
             <div
-              class="card text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Nissan Altima</h1>
@@ -491,18 +491,21 @@
               </div>
             </div>
           </div>
-          <button class="text-white mt-10 py-3 px-6 rounded-full bg-[#299764]">
+          <button
+            class="all text-white mt-10 py-3 px-8 rounded-full bg-[#299764] active:text-black active:bg-white"
+          >
             View all cars
           </button>
         </div>
       </section>
-      <section class="bg-[#272727]">
+      <!--  -->
+      <section class="bg-[#272727] comment-section">
         <div class="container mx-auto px-5">
           <div
             class="wrapper py-[100px] flex justify-between overflow-x-hidden"
           >
             <div
-              class="community flex flex-col justify-between items-start p-[70px] h-[584px] w-2/5 bg-[#1C1C1C] rounded-l-[20px]"
+              class="community flex flex-col justify-between items-start p-[70px] h-[484px] w-3/5 bg-[#1C1C1C] rounded-l-[20px]"
             >
               <div class="flex gap-2">
                 <img src="./images/Google.svg" alt="google" />
@@ -511,173 +514,176 @@
               <h1 class="text-[38px]">Hear what the community is saying</h1>
               <hr class="h-[2px] w-full cardhr" />
               <h1 class="text-[14px]">More interesting reviews on Instagram</h1>
-              <div
-                class="btn-wrapper py-[14px] px-[50px] rounded-full bg-white hover:bg-gradient-to-tr from-[#8B2AB2] via-[#8B2AB2] via-[#D22A8A] via-[#EE2A7B] to-[#F9ED32] duration-200 hover:text-white"
-              >
-                <button class="btn-instagram">Instagram</button>
+              <div class="rounded-full">
+                <div
+                  class="gradient-border-mask rounded-full w-[194px] py-[18px] px-[50px] hover:text-white hover:bg-gradient-to-tr from-[#8B2AB2] via-[#8B2AB2] via-[#D22A8A] via-[#EE2A7B] to-[#F9ED32] duration-200"
+                >
+                  Instagram
+                </div>
               </div>
             </div>
             <div
               class="comments rounded-r-[20px] overflow-hidden bg-[#299764] w-full h-full flex flex-col justify-evenly"
             >
-              <div class="comments-wrapper w-[100%] h-[100%]">
-                <div
-                  class="swiper-wrapper p-5 flex justify-center items-center text-white gap-x-5"
-                >
-                  <div class="block w-[100%] h-[100%] object-cover">
-                    <div
-                      class="slide w-[520px] h-[433px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
-                    >
-                      <div class="flex justify-between">
-                        <div class="flex justify-between w-2/3">
-                          <img
-                            src="./images/Ava.png"
-                            alt="logo"
-                            class="w-[42px] h-[42px]"
-                          />
-                          <div class="info gap-y-2">
-                            <h1 class="text-[16px]">Savannah Nguyen</h1>
-                            <p class="text-[14px]">savannahnguyen@gmail.com</p>
-                          </div>
-                        </div>
+              <div class="comments-wrapper swiper mySwiper2 w-[100%] h-[100%]"">
+              <div
+                class="swipper-wrap swiper-wrapper p-5 flex justify-start items-center text-white gap-x-5"
+              >
+                <div class="swip swiper-slide w-[420px] h-[100%]">
+                  <div
+                    class="slide w-[420px] h-[333px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
+                  >
+                    <div class="flex justify-between">
+                      <div class="flex justify-between w-2/3">
                         <img
-                          src="./images/Google.svg"
-                          alt="google"
+                          src="./images/Ava.png"
+                          alt="logo"
                           class="w-[42px] h-[42px]"
+                          style="width: 42px !important; height: 42px"
                         />
-                      </div>
-                      <p class="text-[14px]">
-                        Sagittis sed tortor, elementum vitae varius sodales
-                        consectetur. Vitae arcu ut morbi bibendum ullamcorper
-                        feugiat. Venenatis hendrerit cursus egestas sit ornare
-                        nunc vulputate aliquam sapien. Pulvinar nunc consectetur
-                        nibh consectetur mollis mauris est mauris amet. Sed hac
-                        vehicula id et dui morbi quam pulvinar condimentum.
-                        Senectus sed varius interdum nunc, arcu vulputate massa.
-                      </p>
-                      <hr />
-                      <div class="flex justify-between items-center w-[60%]">
-                        <h1>Star rating:</h1>
-                        <div class="flex">
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
+                        <div class="info gap-y-2">
+                          <h1 class="text-[16px]">Savannah Nguyen</h1>
+                          <p class="text-[14px]">savannahnguyen@gmail.com</p>
                         </div>
                       </div>
+                      <img
+                        src="./images/Google.svg"
+                        alt="google"
+                        class="w-[42px] h-[42px]"
+                        style="width: 42px !important; height: 42px"
+                      />
                     </div>
-                  </div>
-                  <div class="block w-[100%] h-[100%] object-cover">
-                    <div
-                      class="slide w-[520px] h-[433px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
-                    >
-                      <div class="flex justify-between">
-                        <div class="flex justify-between w-2/3">
-                          <img
-                            src="./images/Ava.png"
-                            alt="logo"
-                            class="w-[42px] h-[42px]"
-                          />
-                          <div class="info gap-y-2">
-                            <h1 class="text-[16px]">Savannah Nguyen</h1>
-                            <p class="text-[14px]">savannahnguyen@gmail.com</p>
-                          </div>
-                        </div>
-                        <img
-                          src="./images/Google.svg"
-                          alt="google"
-                          class="w-[42px] h-[42px]"
-                        />
-                      </div>
-                      <p class="text-[14px]">
-                        Sagittis sed tortor, elementum vitae varius sodales
-                        consectetur. Vitae arcu ut morbi bibendum ullamcorper
-                        feugiat. Venenatis hendrerit cursus egestas sit ornare
-                        nunc vulputate aliquam sapien. Pulvinar nunc consectetur
-                        nibh consectetur mollis mauris est mauris amet. Sed hac
-                        vehicula id et dui morbi quam pulvinar condimentum.
-                        Senectus sed varius interdum nunc, arcu vulputate massa.
-                      </p>
-                      <hr />
-                      <div class="flex justify-between items-center w-[60%]">
-                        <h1>Star rating:</h1>
-                        <div class="flex">
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="block w-[100%] h-[100%] object-cover">
-                    <div
-                      class="slide w-[520px] h-[433px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
-                    >
-                      <div class="flex justify-between">
-                        <div class="flex justify-between w-2/3">
-                          <img
-                            src="./images/Ava.png"
-                            alt="logo"
-                            class="w-[42px] h-[42px]"
-                          />
-                          <div class="info gap-y-2">
-                            <h1 class="text-[16px]">Savannah Nguyen</h1>
-                            <p class="text-[14px]">savannahnguyen@gmail.com</p>
-                          </div>
-                        </div>
-                        <img
-                          src="./images/Google.svg"
-                          alt="google"
-                          class="w-[42px] h-[42px]"
-                        />
-                      </div>
-                      <p class="text-[14px]">
-                        Sagittis sed tortor, elementum vitae varius sodales
-                        consectetur. Vitae arcu ut morbi bibendum ullamcorper
-                        feugiat. Venenatis hendrerit cursus egestas sit ornare
-                        nunc vulputate aliquam sapien. Pulvinar nunc consectetur
-                        nibh consectetur mollis mauris est mauris amet. Sed hac
-                        vehicula id et dui morbi quam pulvinar condimentum.
-                        Senectus sed varius interdum nunc, arcu vulputate massa.
-                      </p>
-                      <hr />
-                      <div class="flex justify-between items-center w-[60%]">
-                        <h1>Star rating:</h1>
-                        <div class="flex">
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                          <img src="./images/Star.svg" alt="star" />
-                        </div>
+                    <p class="text-[14px]">
+                      Sagittis sed tortor, elementum vitae varius sodales
+                      consectetur. Vitae arcu ut morbi bibendum ullamcorper
+                      feugiat. Venenatis hendrerit cursus egestas sit ornare
+                      nunc vulputate aliquam sapien. Pulvinar nunc consectetur
+                      nibh consectetur mollis mauris est mauris amet. Sed hac
+                      vehicula id et dui morbi quam pulvinar condimentum.
+                      Senectus sed varius interdum nunc, arcu vulputate massa.
+                    </p>
+                    <hr />
+                    <div class="flex justify-between items-center w-[60%]">
+                      <h1>Star rating:</h1>
+                      <div class="flex">
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="indikators flex justify-around items-center p-1 h-20 w-full"
-                >
-                  <div class="h-1 w-[80%] bg-neutral-400">
-                    <div class="h-full w-1/4 bg-white"></div>
+                <div class="swip swiper-slide w-[420px] h-[100%]">
+                  <div
+                    class="slide w-[420px] h-[333px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
+                  >
+                    <div class="flex justify-between">
+                      <div class="flex justify-between w-2/3">
+                        <img
+                          src="./images/Ava.png"
+                          alt="logo"
+                          class="w-[42px] h-[42px]"
+                          style="width: 42px !important; height: 42px"
+                        />
+                        <div class="info gap-y-2">
+                          <h1 class="text-[16px]">Ronald Richards</h1>
+                          <p class="text-[14px]">ronaldrichards@gmail.com</p>
+                        </div>
+                      </div>
+                      <img
+                        src="./images/Google.svg"
+                        alt="google"
+                        class="w-[42px] h-[42px]"
+                        style="width: 42px !important; height: 42px"
+                      />
+                    </div>
+                    <p class="text-[14px]">
+                      Placerat pulvinar in amet sem id gravida nisi leo. A
+                      dignissim est pellentesque mi quisque vel mi ut. Porttitor
+                      blandit auctor odio a ornare felis tortor bibendum
+                      molestie.
+                    </p>
+                    <hr />
+                    <div class="flex justify-between items-center w-[60%]">
+                      <h1>Star rating:</h1>
+                      <div class="flex">
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                      </div>
+                    </div>
                   </div>
-                  <div class="flex justify-between w-[14%]">
-                    <div
-                      class="leftnext px-3 py-2 rounded-full bg-white active:bg-[#299764] duration-200"
-                    >
-                      <i
-                        class="bx bxs-chevron-left opacity-70 text-black hover:opacity-100"
-                      ></i>
+                </div>
+                <div class="swip swiper-slide w-[420px] h-[100%]">
+                  <div
+                    class="slide w-[420px] h-[333px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
+                  >
+                    <div class="flex justify-between">
+                      <div class="flex justify-between w-2/3">
+                        <img
+                          src="./images/Ava.png"
+                          alt="logo"
+                          class="w-[42px] h-[42px]"
+                          style="width: 42px !important; height: 42px"
+                        />
+                        <div class="info gap-y-2">
+                          <h1 class="text-[16px]">Kristin Watson</h1>
+                          <p class="text-[14px]">kristinwatson@gmail.com</p>
+                        </div>
+                      </div>
+                      <img
+                        src="./images/Google.svg"
+                        alt="google"
+                        class="w-[42px] h-[42px]"
+                        style="width: 42px !important; height: 42px"
+                      />
                     </div>
-                    <div
-                      class="rightnext px-3 py-2 rounded-full bg-white active:bg-[#299764] duration-200"
-                    >
-                      <i
-                        class="bx bx-chevron-right opacity-70 text-black hover:opacity-100"
-                      ></i>
+                    <p class="text-[14px]">
+                      Id adipiscing vulputate arcu pretium dignissim. Felis
+                      vulputate tellus velit consectetur. Congue convallis
+                      aliquam eget ullamcorper quam pellentesque cursus.
+                      Dictumst mauris ac, quis orci morbi ultrices faucibus
+                      volutpat mauris. Bibendum sed ut lectus facilisi amet
+                      orci. Interdum massa orci urna id ac cras arcu.
+                    </p>
+                    <hr />
+                    <div class="flex justify-between items-center w-[60%]">
+                      <h1>Star rating:</h1>
+                      <div class="flex">
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                        <img src="./images/Star.svg" alt="star" />
+                      </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="indikators flex justify-around items-center p-1 h-20 w-full"
+              >
+                <div class="h-1 w-[70%] bg-neutral-400">
+                  <div class="h-full w-1/3 bg-white"></div>
+                </div>
+                <div class="flex justify-between w-[18%]">
+                  <div
+                    class="leftprev block px-3 py-2 rounded-full bg-white active:bg-[#299764] duration-200"
+                  >
+                    <i
+                      class="bx bxs-chevron-left opacity-70 text-black hover:opacity-100"
+                    ></i>
+                  </div>
+                  <div
+                    class="rightnext block px-3 py-2 rounded-full bg-white active:bg-[#299764] duration-200"
+                  >
+                    <i
+                      class="bx bx-chevron-right opacity-70 text-black hover:opacity-100"
+                    ></i>
                   </div>
                 </div>
               </div>
@@ -685,7 +691,328 @@
           </div>
         </div>
       </section>
+      <!--  -->
+      <section>
+        <div class="container mx-auto px-5 py-[160px]">
+          <div
+            class="wrapper flex flex-col justify-between items-start min-h-[100px]"
+          >
+            <h1 class="text-[24px]">More than 50 brands of cars</h1>
+            <div class="brands flex justify-between w-full px-2">
+              <img src="./images/image 9.png" alt="" />
+              <img src="./images/image 10.png" alt="" />
+              <img src="./images/image 11.png" alt="" />
+              <img src="./images/image 12.png" alt="" />
+              <img src="./images/Group 2 1.png" alt="" />
+              <img src="./images/volkswagen-vector-svg-3 3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <section>
+        <div class="container mx-auto px-5 pb-[160px]">
+          <div
+            class="wrapper flex flex-col justify-between items-center min-h-[600px]"
+          >
+            <h1 class="text-[36px]">Unparalleled service</h1>
+            <p class="w-1/2 text-[16px] text-center">
+              Whether you are looking for Newark Airport car rental, an
+              insurance replacement vehicle or minivan to take on vacation Car
+              rental has it all.
+            </p>
+            <div class="wrapper-cardds grid grid-cols-2 gap-4">
+              <div
+                class="cardd w-[590px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764]"
+              >
+                <div class="flex justify-between items-center leading-7">
+                  <h1 class="w-3/5 text-[32px]">Book online pay online</h1>
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M29.9999 9.37427L48.184 9.8884C51.3971 9.97925 54.0546 12.4184 54.42 15.6119C55.2288 22.6809 55.2288 29.8191 54.42 36.8882C54.0546 40.0817 51.397 42.5208 48.184 42.6116L33.125 43.0374V48.125H42.5C43.5355 48.125 44.375 48.9645 44.375 50C44.375 51.0356 43.5355 51.875 42.5 51.875H17.5C16.4644 51.875 15.625 51.0356 15.625 50C15.625 48.9645 16.4644 48.125 17.5 48.125H26.875V43.0374L11.8159 42.6116C8.60281 42.5208 5.94527 40.0817 5.57988 36.8882C4.77106 29.8191 4.77106 22.6809 5.57988 15.6119C5.94527 12.4184 8.60281 9.97925 11.8159 9.8884L29.9999 9.37427ZM12.5 34.375C11.4644 34.375 10.625 35.2145 10.625 36.25C10.625 37.2856 11.4644 38.125 12.5 38.125H47.5C48.5355 38.125 49.375 37.2856 49.375 36.25C49.375 35.2145 48.5355 34.375 47.5 34.375H12.5Z"
+                      fill="#299764"
+                    />
+                  </svg>
+                </div>
+                <p class="text-[16px] w-3/5">
+                  Complete the booking process A-Z, with our easy online system
+                </p>
+              </div>
+              <div
+                class="cardd w-[590px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764]"
+              >
+                <div class="flex justify-between items-center leading-7">
+                  <h1 class="w-3/5 text-[32px]">Guaranteed car reservation</h1>
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M32.9017 11.0177C31.1165 9.94276 28.8835 9.94276 27.0983 11.0177L25.8076 11.7949C22.6757 13.6807 19.1598 14.838 15.5201 15.1809L14.7069 15.2575C13.1017 15.4087 11.875 16.7564 11.875 18.3687V22.4784C11.875 29.425 14.6952 36.0739 19.6896 40.9021L27.828 48.7696C29.0393 49.9405 30.9607 49.9405 32.172 48.7696L40.3104 40.9021C45.3048 36.0739 48.125 29.425 48.125 22.4784V18.3687C48.125 16.7564 46.8983 15.4087 45.2931 15.2575L44.4799 15.1809C40.8402 14.838 37.3243 13.6807 34.1924 11.7949L32.9017 11.0177Z"
+                      fill="#299764"
+                    />
+                  </svg>
+                </div>
+                <p class="text-[16px] w-3/5">
+                  When you book with Car rental, you can be confident your car
+                  will be waiting for you
+                </p>
+              </div>
+              <div
+                class="cardd w-[590px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764]"
+              >
+                <div class="flex justify-between items-center leading-7">
+                  <h1 class="w-3/5 text-[32px]">
+                    Unparalleled customer service
+                  </h1>
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25 9.375C19.8223 9.375 15.625 13.5723 15.625 18.75C15.625 23.9277 19.8223 28.125 25 28.125C30.1777 28.125 34.375 23.9277 34.375 18.75C34.375 13.5723 30.1777 9.375 25 9.375Z"
+                      fill="#299764"
+                    />
+                    <path
+                      d="M15 33.125C9.82233 33.125 5.625 37.3223 5.625 42.5V45.4707C5.625 47.3538 6.98971 48.9594 8.84818 49.2628C14.375 50.1651 19.9585 50.6013 25.5402 50.5712C25.9305 50.5691 26.1665 50.1374 25.9756 49.797C24.5582 47.2694 23.75 44.3541 23.75 41.25C23.75 39.2823 24.0748 37.3904 24.6736 35.6251C24.7861 35.2933 24.5454 34.9406 24.1954 34.9251C22.5658 34.8527 20.9436 34.5602 19.374 34.0476L17.2102 33.3411C16.7717 33.1979 16.3134 33.125 15.8522 33.125H15Z"
+                      fill="#299764"
+                    />
+                    <path
+                      d="M43.125 37.5C43.125 36.4645 42.2855 35.625 41.25 35.625C40.2145 35.625 39.375 36.4645 39.375 37.5V41.9318C39.375 42.5317 39.662 43.0954 40.1472 43.4482L42.6472 45.2664C43.4847 45.8755 44.6573 45.6903 45.2664 44.8528C45.8755 44.0153 45.6903 42.8427 44.8528 42.2336L43.125 40.977V37.5Z"
+                      fill="#299764"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M41.25 55C48.8439 55 55 48.8439 55 41.25C55 33.6561 48.8439 27.5 41.25 27.5C33.6561 27.5 27.5 33.6561 27.5 41.25C27.5 48.8439 33.6561 55 41.25 55ZM41.25 51.25C46.7728 51.25 51.25 46.7728 51.25 41.25C51.25 35.7272 46.7728 31.25 41.25 31.25C35.7272 31.25 31.25 35.7272 31.25 41.25C31.25 46.7728 35.7272 51.25 41.25 51.25Z"
+                      fill="#299764"
+                    />
+                  </svg>
+                </div>
+                <p class="text-[16px] w-3/5">
+                  We're here to help. We pride ourselves in our customer service
+                </p>
+              </div>
+              <div
+                class="cardd w-[590px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764]"
+              >
+                <div class="flex justify-between items-center leading-7">
+                  <h1 class="w-3/5 text-[32px]">
+                    No reservation or  booking fees
+                  </h1>
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M52.5254 25.4283L52.5319 34.4855C52.4681 35.3483 52.3859 36.2102 52.2853 37.0704C52.1171 38.5089 50.9477 39.6693 49.4792 39.8334C44.8798 40.3474 40.1203 40.3474 35.5209 39.8334C34.0524 39.6693 32.883 38.5089 32.7147 37.0704C32.1653 32.3729 32.1653 27.6273 32.7147 22.9298C32.883 21.4913 34.0524 20.3309 35.5209 20.1668C40.1203 19.6527 44.8798 19.6527 49.4792 20.1668C50.9477 20.3309 52.1171 21.4913 52.2853 22.9298C52.3826 23.7613 52.4626 24.5943 52.5254 25.4283ZM42.5 26.2501C40.429 26.2501 38.75 27.929 38.75 30.0001C38.75 32.0712 40.429 33.7501 42.5 33.7501C44.5711 33.7501 46.25 32.0712 46.25 30.0001C46.25 27.929 44.5711 26.2501 42.5 26.2501Z"
+                      fill="#299764"
+                    />
+                    <path
+                      d="M51.009 15.0994C51.3977 15.7725 50.6682 16.5263 49.8957 16.44C45.0195 15.895 39.9805 15.895 35.1043 16.44C31.931 16.7947 29.3645 19.2935 28.9901 22.4942C28.4069 27.4811 28.4069 32.5191 28.9901 37.506C29.3645 40.7067 31.931 43.2055 35.1043 43.5602C39.9805 44.1052 45.0195 44.1052 49.8957 43.5602C50.6733 43.4733 51.4088 44.2323 51.0164 44.9092C49.0699 48.2663 45.5996 50.6093 41.5671 51.0336L39.9374 51.2051C31.6603 52.0761 23.3117 52.0187 15.0473 51.0339L13.9674 50.9052C9.51212 50.3743 5.982 46.8934 5.38857 42.446C4.28633 34.1853 4.28633 25.8149 5.38857 17.5542C5.982 13.1068 9.51212 9.62592 13.9674 9.095L15.0473 8.96633C23.3117 7.98151 31.6603 7.92407 39.9374 8.79508L41.5671 8.96657C45.603 9.39128 49.0678 11.7378 51.009 15.0994Z"
+                      fill="#299764"
+                    />
+                  </svg>
+                </div>
+                <p class="text-[16px] w-3/5">
+                  No cancellation fees if cancelled 24 hours prior to booking
+                  time
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <section>
+        <div class="container mx-auto px-5 pb-[160px]">
+          <div
+            class="keep-wrapper flex justify-between border-[#333333] border-[2px] rounded-[20px] min-h-[500px]"
+          >
+            <div class="info flex flex-col w-3/5 justify-between p-8">
+              <div class="flex flex-col justify-between">
+                <h1 class="text-[36px] font-semibold">
+                  Car rental keeps you safe
+                </h1>
+                <p class="text-[16px] font-light">
+                  The safety of our employees and renters is our number one
+                  priority. In addition to being confident your vehicle is
+                  cleaned and sanitized every time you rent, you can also feel
+                  confident that we will take every opportunity to enhance the
+                  health and safety measures currently practiced in our
+                  operations.
+                </p>
+              </div>
+              <div class="elems flex justify-between items-center">
+                <div
+                  class="safe flex flex-col justify-between p-4 w-[200px] h-[160px] bg-[#272727] rounded-2xl hover:bg-[#299764]"
+                >
+                  <div class="w-full">
+                    <img
+                      src="./images/Flask-alt.svg"
+                      alt=""
+                      class="mr-0 ml-auto"
+                    />
+                  </div>
+                  <p class="text-[16px]">
+                    Every car is thoroughly sanitized and cleaned
+                  </p>
+                </div>
+                <div
+                  class="safe flex flex-col justify-between p-4 w-[200px] h-[160px] bg-[#272727] rounded-2xl hover:bg-[#299764]"
+                >
+                  <div class="w-full">
+                    <img
+                      src="./images/Heartbeat.svg"
+                      alt=""
+                      class="mr-0 ml-auto"
+                    />
+                  </div>
+                  <p class="text-[16px]">All of our employees wear masks</p>
+                </div>
+                <div
+                  class="safe flex flex-col justify-between p-4 w-[200px] h-[160px] bg-[#272727] rounded-2xl hover:bg-[#299764]"
+                >
+                  <div class="w-full">
+                    <img
+                      src="./images/Folder-lock.svg"
+                      alt=""
+                      class="mr-0 ml-auto"
+                    />
+                  </div>
+                  <p class="text-[16px]">
+                    We stay up to date with all protocol from the CDC
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="absolute p-[150px] bg-[#299764] rounded-full -z-10 left-10 top-4"
+              ></div>
+              <img
+                class="h-full pt-10 pr-10"
+                src="./images/wepik--2022427-105555-removebg-preview 1.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="border-t-2 border-[#333333] min-h-[406px]">
+      <div class="container mx-auto px-5">
+        <div class="wrapper py-8 flex justify-between text-[16px]">
+          <div class="footerinfo flex gap-[86px] w-1/4 flex-col">
+            <div class="flex flex-col gap-2">
+              <img src="./images/Logo.svg" class="w-[150px]" alt="" />
+              <p class="text-[12px]">
+                Car rental offers a wide range of cars available for rent in
+                Newark EWR Airport NJ. We pride ourselves in our customer
+                service, and hassle-free renting experience.
+              </p>
+            </div>
+            <div>
+              <h1 class="w-[150px]">© 2022 Car rental Terms & Conditions</h1>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="bottom flex flex-col w-[70%] justify-start">
+            <div class="flex justify-between pb-2">
+              <ul class="flex flex-col gap-2">
+                <h1>Main</h1>
+                <li><a href="#">My Bookings</a></li>
+                <li><a href="#">Reservation</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2">
+                <h1>Categories</h1>
+                <li><a href="#">Compact</a></li>
+                <li><a href="#">Sports cars</a></li>
+                <li><a href="#">Vans</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2">
+                <h1>Company</h1>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2">
+                <h1>Our locations</h1>
+                <li><a href="#">2118 Thornridge Cir. Syracuse</a></li>
+                <li><a href="#">2118 Thornridge Cir. Syracuse</a></li>
+                <li><a href="#">4517 Washington Ave.</a></li>
+              </ul>
+            </div>
+
+            <hr class="py-2" />
+
+            <div class="flex justify-between">
+              <ul class="flex flex-col gap-2">
+                <h1>Contact</h1>
+                <li><a href="#">+1 855 420 0000</a></li>
+                <li><a href="#">carrental@gmail.com</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2">
+                <h1>House of operation</h1>
+                <li><a href="#">8:00 - 21:00 Mon-Sat </a></li>
+                <li><a href="#">9:00 - 15:00 Sundays</a></li>
+              </ul>
+              <ul class="flex flex-col gap-2 w-[28%]">
+                <h1>Social network</h1>
+                <li class="flex justify-between">
+                  <div
+                    class="py-[4px] px-[12px] bg-white text-black rounded-full flex items-center icon"
+                  >
+                    <i class="bx bxl-instagram text-xl"></i>
+                  </div>
+                  <div
+                    class="py-[6px] px-[12px] bg-white text-black  rounded-full flex items-center icon"
+                  >
+                    <i class="bx bxl-twitter text-xl"></i>
+                  </div>
+                  <div
+                    class="py-[6px] px-[12px] bg-white text-black  rounded-full flex items-center icon"
+                  >
+                    <i class="bx bxl-facebook text-xl"></i>
+                  </div>
+                  <div
+                    class="py-[6px] px-[12px] bg-white text-black  rounded-full flex items-center icon"
+                  >
+                    <i class="bx bxl-whatsapp text-xl"></i>
+                  </div>
+                </li>
+              </ul>
+              <div
+                class="w-[70px] h-[70px] rounded-full bg-[#299764] ml-[55px] flex justify-center items-center"
+              >
+                <img src="./images/Icon.svg" alt="" class="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./script/script.js"></script>
@@ -695,6 +1022,15 @@
         nextEl: ".right",
         prevEl: ".left",
       },
+    });
+
+    var swiper2 = new Swiper(".mySwiper2", {
+      navigation: {
+        nextEl: ".rightnext",
+        prevEl: ".leftprev",
+      },
+      slidesPerView: 1.4,
+      spaceBetween: 10,
     });
   </script>
 </html>

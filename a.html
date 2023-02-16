@@ -62,8 +62,7 @@
       <div class="swiper-slide">Slide 8</div>
       <div class="swiper-slide">Slide 9</div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="swiper-scrollbar"></div>
   </div>
 
   <!-- Swiper JS -->
@@ -72,9 +71,9 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
       },
     });
   </script>

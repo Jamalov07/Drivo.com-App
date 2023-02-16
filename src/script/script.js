@@ -3,6 +3,143 @@ let theme = document.querySelector(".theme");
 let mode = document.querySelector(".mode");
 let bottom = document.querySelectorAll(".bottom");
 let cards = document.querySelectorAll(".card");
+let header = document.querySelector("header");
+let commentSection = document.querySelector(".comment-section");
+let community = document.querySelector(".community");
+let swippers = document.querySelectorAll(".swip");
+let swipperWrap = document.querySelector(".swipper-wrap");
+let btns = document.querySelectorAll(".btns");
+
+const createElement = (tagName, className, content) => {
+  const element = document.createElement(tagName);
+  if (className) element.setAttribute("class", className);
+  if (content) element.innerHTML = content;
+  return element;
+};
+
+const cars = [
+  {
+    id: 1,
+    title: "Ford Fiesta",
+    subtitle: "Economy Car",
+    link: "./images/image 13.png",
+    type: "compact",
+  },
+  {
+    id: 2,
+    title: "Nissan Versa",
+    subtitle: "Compact Car",
+    link: "./images/image 13 (1).png",
+    type: "compact",
+  },
+  {
+    id: 3,
+    title: "Toyota Corolla",
+    subtitle: "Mid-size Car",
+    link: "./images/image 13 (2).png",
+    type: "compact",
+  },
+  {
+    id: 4,
+    title: "Nissan Roque",
+    subtitle: "Mid-size SUV",
+    link: "./images/image 13 (3).png",
+    type: "compact",
+  },
+  {
+    id: 5,
+    title: "Chevy Traverse",
+    subtitle: "Full-size SUV",
+    link: "./images/image 13 (4).png",
+    type: "compact",
+  },
+  {
+    id: 6,
+    title: "Nissan Altima",
+    subtitle: "Full-size Car",
+    link: "./images/image 13 (5).png",
+    type: "compact",
+  },
+  {
+    id: 7,
+    title: "Royce rolls ghost",
+    subtitle: "Full-size Car",
+    link: "./images/image 13 (10).png",
+    type: "Sports cars",
+  },
+  {
+    id: 8,
+    title: "Mercedes s class",
+    subtitle: "Full-size Car",
+    link: "./images/image 13 (1) (1).png",
+    type: "Sports cars",
+  },
+  {
+    id: 9,
+    title: "Lamborghini",
+    subtitle: "Mid-size Car",
+    link: "./images/image 13 (2) (1).png",
+    type: "Sports cars",
+  },
+  {
+    id: 10,
+    title: "Mercedes g63amg",
+    subtitle: "Mid-size SUV",
+    link: "./images/image 13 (3) (1).png",
+    type: "Sports cars",
+  },
+
+  {
+    id: 11,
+    title: "15-Passenger Ford Transit ",
+    subtitle: "Full-size Car",
+    link: "./images/image 13 (4) (1).png",
+    type: "Vans",
+  },
+  {
+    id: 12,
+    title: "Chrysler Pacifica",
+    subtitle: "Full-size Car",
+    link: "./images/image 13 (5) (1).png",
+    type: "Vans",
+  },
+  {
+    id: 13,
+    title: "Chevy Silverado 4500HD",
+    subtitle: "Mid-size Car",
+    link: "./images/image 13 (6).png",
+    type: "Vans",
+  },
+  {
+    id: 14,
+    title: "12-Passenger Ford Transit",
+    subtitle: "Full-size SUV",
+    link: "./images/image 13 (7).png",
+    type: "Vans",
+  },
+  {
+    id: 15,
+    title: "15-Passenger Ford Transit ",
+    subtitle: "Mid-size SUV",
+    link: "./images/image 13 (8).png",
+    type: "Vans",
+  },
+  {
+    id: 16,
+    title: "Mercedes-Benz Sprinter",
+    subtitle: "Mid-size SUV",
+    link: "./images/image 13 (9).png",
+    type: "Vans",
+  },
+];
+
+// let wrapperCardds = document.querySelector(".wrapper-cardds");
+let cardds = document.querySelectorAll(".cardd");
+// console.log(wrapperCardds.children);
+let keepWrapper = document.querySelector(".keep-wrapper");
+let safeCars = document.querySelectorAll(".safe");
+let icons = document.querySelectorAll(".icon");
+
 theme.addEventListener("click", () => {
   changeTheme();
 });
@@ -26,10 +163,47 @@ function changeTheme() {
       bot.setAttribute("src", "./images/Iconwhite.svg");
     }
   });
+  let cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
     card.classList.toggle("bg-[#272727]");
     card.classList.toggle("text-black");
     card.classList.toggle("bg-[#F5F5F5]");
+  });
+
+  header.classList.toggle("border-[#333333]");
+  header.classList.toggle("border-[#E5E7EA]");
+  commentSection.classList.toggle("bg-[#272727]");
+  commentSection.classList.toggle("bg-[#F5F5F5]");
+  community.classList.toggle("bg-[#1C1C1C]");
+  community.classList.toggle("bg-white");
+  swipperWrap.classList.toggle("text-white");
+  swippers.forEach((card) => {
+    console.log(card);
+    card.firstElementChild.classList.toggle("bg-[#1C1C1C]");
+    card.firstElementChild.classList.toggle("bg-white");
+  });
+
+  btns.forEach((btn) => {
+    btn.classList.toggle("border-[#E5E7EA]");
+    btn.classList.toggle("border-[#333333]");
+  });
+
+  cardds.forEach((card) => {
+    card.classList.toggle("bg-[#272727]");
+    card.classList.toggle("bg-[#F5F5F5]");
+  });
+  keepWrapper.classList.toggle("border-[#333333]");
+  keepWrapper.classList.toggle("border-[#E5E7EA]");
+
+  safeCars.forEach((card) => {
+    card.classList.toggle("bg-[#272727]");
+    card.classList.toggle("bg-[#F5F5F5]");
+  });
+  icons.forEach((icon) => {
+    icon.classList.toggle("bg-white");
+    icon.classList.toggle("bg-black");
+    icon.classList.toggle("text-black");
+    icon.classList.toggle("text-white");
   });
 }
 
@@ -294,4 +468,92 @@ modalContent.addEventListener("click", (e) => {
     passwordlabel.classList.remove("border-2");
     passwordlabel.classList.remove("border-[#299764]");
   }
+});
+
+// let leftprev = document.querySelector(".leftprev");
+// let rightnext = document.querySelector(".rightnext");
+// let swiperWripper = document.querySelector(".swiper-wrapper");
+// console.log(rightnext);
+
+// rightnext.addEventListener("click", () => {
+//   swiperWripper.style.transform = "translateX(-300px)";
+//   console.log(swiperWripper);
+// });
+
+let wrapperCards = document.querySelector(".wrapper-cards");
+
+let compactBtn = document.querySelector(".compact");
+let sportBtn = document.querySelector(".sport");
+let vanBtn = document.querySelector(".van");
+
+vanBtn.addEventListener("click", () => {
+  let vancars = cars.filter((car) => car.type === "Vans");
+  renderCar(vancars);
+  compactBtn.classList.remove("active");
+  sportBtn.classList.remove("active");
+  vanBtn.classList.add("active");
+});
+
+compactBtn.addEventListener("click", () => {
+  let compactcars = cars.filter((car) => car.type === "compact");
+  renderCar(compactcars);
+  sportBtn.classList.remove("active");
+  vanBtn.classList.remove("active");
+  compactBtn.classList.add("active");
+});
+
+sportBtn.addEventListener("click", () => {
+  let sportcars = cars.filter((car) => car.type === "Sports cars");
+  renderCar(sportcars);
+  vanBtn.classList.remove("active");
+  compactBtn.classList.remove("active");
+  sportBtn.classList.add("active");
+});
+
+function renderCar(arr) {
+  wrapperCards.innerHTML = "";
+  arr.forEach((car) => {
+    const element = createCar(car);
+    wrapperCards.append(element);
+  });
+}
+
+function createCar(car) {
+  let mode = document.body.classList.contains("text-white");
+  const element = createElement(
+    "div",
+    `card hover:bg-[#299764]  duration-300  ${
+      mode ? `text-white bg-[#272727]` : `text-black bg-[#F5F5F5]`
+    } w-[387px] h-[433px]  rounded-xl hover:text-white`,
+    ` <div class="info-texts gap-2 flex flex-col px-6 py-4">
+    <h1 class="text-[24px] font-semibold">${car.title}</h1>
+    <h4 class="text-[16px]">${car.subtitle}</h4>
+  </div>
+  <img src="${car.link}" alt="car" />
+  <div class="grid grid-cols-2 w-full px-4 gap-y-2">
+    <div class="flex items-center gap-2">
+      <i class="bx bx-user"></i>
+      <h1>5 Seats</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <img src="./images/gear 1.svg" alt="aut" />
+      <h1>Automatic</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <img src="./images/File-user.svg" alt="user" />
+      <h1>21+ Years</h1>
+    </div>
+    <div class="flex items-center gap-2">
+      <i class="bx bxs-droplet"></i>
+      <h1>1-lit / 2.5 km</h1>
+    </div>
+  </div>`
+  );
+  return element;
+}
+
+let all = document.querySelector(".all");
+
+all.addEventListener("click", () => {
+  renderCar(cars);
 });

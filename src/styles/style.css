@@ -18,10 +18,20 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  /* background: #fff; */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.comments-wrapper .swiper-slide {
+  text-align: start;
+  font-size: 18px;
+  /* background: #fff; */
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 470px !important;
 }
 
 .swiper-slide img {
@@ -53,30 +63,54 @@
   );
 }
 
-.btn-instagram {
-  background: radial-gradient(
-    230.93% 230.93% at 102.01% 2.03%,
-    #f9ed32 0%,
-    #ee2a7b 36%,
-    #d22a8a 44%,
-    #8b2ab2 60%,
-    #1b2af0 83%,
-    #002aff 88%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.gradient-border-mask {
+  position: relative;
+  padding: 15px 20px;
 }
 
-.btn-wrapper {
-  border: 1.5px solid;
-  border-color: radial-gradient(
-    230.93% 230.93% at 102.01% 2.03%,
-    #f9ed32 0%,
-    #ee2a7b 36%,
-    #d22a8a 44%,
-    #8b2ab2 60%,
-    #1b2af0 83%,
-    #002aff 88%
-  );
+.gradient-border-mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: radial-gradient(
+      230.93% 230.93% at 102.01% 2.03%,
+      #f9ed32 0%,
+      #ee2a7b 36%,
+      #d22a8a 44%,
+      #8b2ab2 60%,
+      #1b2af0 83%,
+      #002aff 88%
+    )
+    border-box;
+
+  background: radial-gradient(
+      230.93% 230.93% at 102.01% 2.03%,
+      #f9ed32 0%,
+      #ee2a7b 36%,
+      #d22a8a 44%,
+      #8b2ab2 60%,
+      #1b2af0 83%,
+      #002aff 88%
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1240px !important;
+}
+
+.active {
+  color: white !important;
+  background-color: #077743;
+}
+
