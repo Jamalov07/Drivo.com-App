@@ -168,6 +168,10 @@ let brandsInLight = [
   },
 ];
 
+let menuContent = document.querySelector(".menu-content");
+let themeIcon = document.querySelector(".themeicon");
+let cancelMenu = document.querySelector(".cancel");
+let footer = document.querySelector("footer")
 theme.addEventListener("click", () => {
   changeTheme();
 });
@@ -250,8 +254,20 @@ function changeTheme() {
     });
   }
 
-  if (document.body.classList.contains("text-white")) {
-  }
+  menuContent.classList.toggle("text-white");
+  menuContent.classList.toggle("bg-[#1C1C1C]");
+  menuContent.classList.toggle("bg-white");
+
+  themeIcon.classList.toggle("text-[#555555]");
+  themeIcon.classList.toggle("bg-[#272727]");
+  themeIcon.classList.toggle("bg-[#F5F5F5]");
+  themeIcon.classList.toggle("text-black");
+  cancelMenu.classList.toggle("text-[#555555]");
+  cancelMenu.classList.toggle("bg-[#272727]");
+  cancelMenu.classList.toggle("bg-[#F5F5F5]");
+  cancelMenu.classList.toggle("text-black");
+  footer.classList.toggle("border-[#333333]");
+  footer.classList.toggle("border-[#E5E7EA]");
 }
 
 let themeInLocalStorage = localStorage.getItem("theme");
@@ -571,7 +587,7 @@ function createCar(car) {
     "div",
     `card hover:bg-[#299764]  duration-300  ${
       mode ? `text-white bg-[#272727]` : `text-black bg-[#F5F5F5]`
-    } w-[387px] h-[433px]  rounded-xl hover:text-white`,
+    } md:w-[387px] md:h-[433px]  rounded-xl hover:text-white`,
     ` <div class="info-texts gap-2 flex flex-col px-6 py-4">
     <h1 class="text-[24px] font-semibold">${car.title}</h1>
     <h4 class="text-[16px]">${car.subtitle}</h4>
@@ -663,3 +679,31 @@ safeCars.forEach((safe) => {
     }
   });
 });
+
+let menu = document.querySelector(".menu");
+let menuMd = document.querySelector(".menu-md");
+menu.addEventListener("click", () => {
+  menuMd.classList.toggle("hidden");
+});
+
+let cancel = document.querySelector(".cancel");
+
+cancel.addEventListener("click", () => {
+  menuMd.classList.toggle("hidden");
+});
+
+let menuTheme = document.querySelector(".menu-theme");
+
+menuTheme.addEventListener("click", () => {
+  // menuMd.classList.toggle("hidden");
+  mode.classList.toggle("text-[#555555]");
+  changeTheme();
+});
+
+
+let btnLoginMenu = document.querySelector(".btn-login-menu");
+
+btnLoginMenu.addEventListener("click", () => {
+  menuMd.classList.toggle("hidden");
+  modal.classList.remove("hidden");
+})

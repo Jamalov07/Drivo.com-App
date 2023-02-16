@@ -34,7 +34,19 @@
     <header class="text-[18px] border-b-2 border-[#333333]">
       <div class="container mx-auto px-5">
         <nav class="h-[94px] flex justify-between items-center">
-          <ul class="navbar flex justify-between w-1/2 items-center">
+          <ul
+            class="flex justify-between w-full lg:hidden md:flex flex sm:flex"
+          >
+            <li>
+              <img src="./images/Logo.svg" alt="logo" />
+            </li>
+            <li>
+              <i class="menu bx bx-menu text-2xl"></i>
+            </li>
+          </ul>
+          <ul
+            class="navbar hidden sm:hidden justify-between w-1/2 items-center md:hidden lg:flex"
+          >
             <li>
               <img src="./images/Logo.svg" alt="logo" />
             </li>
@@ -99,7 +111,9 @@
               </div>
             </li>
           </ul>
-          <ul class="flex justify-between items-center w-1/3">
+          <ul
+            class="hidden sm:hidden justify-between items-center w-1/3 md:hidden lg:flex"
+          >
             <li
               class="raqam px-4 py-2 rounded-full duration-300 active:bg-[#299764]"
             >
@@ -129,12 +143,12 @@
     <!-- modal -->
     <div class="modal text-black w-screen h-screen fixed hidden top-0 z-40">
       <div
-        class="modal-content w-[600px] h-[540px] bg-white rounded-[20px] mx-auto my-[10%] relative"
+        class="modal-content h-[444px] w-[358px] lg:w-[600px] md:w-[540px] lg:h-[540px] md:h-[440px] bg-white rounded-[20px] mx-auto lg:my-[10%] mt-[40%] md:mt-[20%] relative"
       >
         <i
-          class="cancellogin bx bx-x p-4 absolute rounded-full bg-[#f5f5f5] right-6 hover:font-bold top-6 active:bg-[#299764]"
+          class="cancellogin bx bx-x p-4 absolute rounded-full bg-[#f5f5f5] right-2 top-2 md:right-6 hover:font-bold md:top-6 active:bg-[#299764]"
         ></i>
-        <div class="py-10 px-8 flex flex-col justify-between h-full">
+        <div class="py-4 px-3 md:py-10 md:px-8 flex flex-col justify-between h-full">
           <h1 class="text-center text-[36px]">Login</h1>
           <p class="text-[16px] text-center font-light">
             Use the email and password that you login
@@ -187,7 +201,59 @@
       </div>
     </div>
     <!--  -->
+    <!-- md menu -->
+    <div
+      class="menu-md hidden duration-500 w-screen h-screen mx-auto z-40 fixed top-0"
+    >
+      <div
+        class="menu-content w-[80%] md:w-[60%] h-screen p-5 mr-0 ml-auto bg-[#1C1C1C] text-white"
+      >
+        <div class="flex justify-between items-center pb-14">
+          <img src="./images/Logo.svg" alt="logo" class="w-[150px]" />
+          <i
+            class="cancel bx bx-x p-3 rounded-full bg-[#272727] text-white"
+          ></i>
+        </div>
+        <div class="flex flex-col justify-between items-start gap-y-4">
+          <h1>Categories</h1>
+          <ul class="flex flex-col gap-1">
+            <h1 class="">About us</h1>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Locations</a></li>
+          </ul>
 
+          <ul class="flex flex-col gap-1">
+            <h1 class="">Help center</h1>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <ul
+          class="flex justify-between items-center w-full h-full mb-0 pb-20 mt-auto"
+        >
+          <li
+            class="raqam hidden md:block px-4 py-2 rounded-full duration-300 active:bg-[#299764]"
+          >
+            <a href="#">+1 855 420 0000</a>
+          </li>
+          <li class="menu-theme">
+            <i
+              class="themeicon bx bxs-sun mode p-4 bg-[#272727] rounded-full text-[#555555] active:bg-[#299764] active:text-white duration-300"
+            ></i>
+          </li>
+          <li class="text-white">
+            <div
+              class="btn-login btn-login-menu flex items-center gap-[11px] py-[14px] duration-300 hover:bg-[#077743] px-[30px] rounded-full bg-[#299764] active:bg-[#F5F5F5] active:text-black"
+            >
+              <h1 class="duration-300">Login</h1>
+              <img src="./images/Login.svg" alt="login" class="duration-300" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--  -->
     <main>
       <section>
         <div class="container mx-auto px-5 pt-5">
@@ -196,10 +262,12 @@
               <div class="swiper-slide">
                 <div class="soya z-10"></div>
                 <div
-                  class="info-wrapper text-center absolute z-10 w-1/3 top-[60px] h-[94px] left-1/3 right-1/3"
+                  class="info-wrapper text-center absolute z-10 w-4/5 md:w-1/3 md:top-[60px] h-[94px] left-1/5 right-1/5 md:left-1/3 md:right-1/3"
                 >
-                  <h1 class="font-semibold text-[36px]">Compact cars</h1>
-                  <p class="text-[16px]">
+                  <h1 class="font-semibold text-[24px] md:text-[36px]">
+                    Compact cars
+                  </h1>
+                  <p class="text-[12px] md:text-[16px]">
                     Rent cars as you are comfortable and where you are
                     comfortable.
                   </p>
@@ -207,17 +275,19 @@
                 <img
                   src="./images/Rectangle 671.png"
                   alt="car"
-                  class="w-full rounded-[20px] swiper-slide"
+                  class="w-full h-[300px] md:h-auto rounded-[20px] swiper-slide"
                 />
               </div>
 
               <div class="swiper-slide">
                 <div class="soya z-10"></div>
                 <div
-                  class="info-wrapper text-center absolute z-10 w-1/3 top-[60px] h-[94px] left-1/3 right-1/3"
+                  class="info-wrapper text-center absolute z-10 w-4/5 md:w-1/3 md:top-[60px] h-[94px] left-1/5 right-1/5 md:left-1/3 md:right-1/3"
                 >
-                  <h1 class="font-semibold text-[36px]">Sports cars</h1>
-                  <p class="text-[16px]">
+                  <h1 class="font-semibold text-[24px] md:text-[36px]">
+                    Sports cars
+                  </h1>
+                  <p class="text-[12px] md:text-[16px]">
                     Rent cars as you are comfortable and where you are
                     comfortable.
                   </p>
@@ -225,16 +295,16 @@
                 <img
                   src="./images/Rectangle 671 (1).png"
                   alt="car"
-                  class="w-full rounded-[20px] swiper-slide"
+                  class="w-full h-[300px] md:h-auto rounded-[20px] swiper-slide"
                 />
               </div>
               <div class="swiper-slide">
                 <div class="soya z-10"></div>
                 <div
-                  class="info-wrapper text-center absolute z-10 w-1/3 top-[60px] h-[94px] left-1/3 right-1/3"
+                  class="info-wrapper text-center absolute z-10 w-4/5 md:w-1/3 md:top-[60px] h-[94px] left-1/5 right-1/5 md:left-1/3 md:right-1/3"
                 >
-                  <h1 class="font-semibold text-[36px]">Vans</h1>
-                  <p class="text-[16px]">
+                  <h1 class="font-semibold text-[24px] md:text-[36px]">Vans</h1>
+                  <p class="text-[12px] md:text-[16px]">
                     Rent cars as you are comfortable and where you are
                     comfortable.
                   </p>
@@ -242,15 +312,17 @@
                 <img
                   src="./images/Rectangle 671 (2).png"
                   alt="car"
-                  class="w-full rounded-[20px] swiper-slide"
+                  class="w-full h-[300px] md:h-auto rounded-[20px] swiper-slide"
                 />
               </div>
             </div>
 
             <div
-              class="flex justify-between px-8 absolute z-10 w-full bottom-8 duration-500"
+              class="flex justify-center md:justify-between px-8 absolute z-10 w-full md:bottom-8 bottom-5 duration-500"
             >
-              <div class="flex justify-between items-center w-[4%]">
+              <div
+                class="flex justify-between items-center w-[25%] sm:[15%] md:w-[9%] lg:w-[6%]"
+              >
                 <div
                   class="h-2 w-6 bg-white rounded-full indi duration-300"
                 ></div>
@@ -261,7 +333,9 @@
                   class="h-2 w-2 bg-white rounded-full indi duration-300"
                 ></div>
               </div>
-              <div class="flex justify-between w-[10%]">
+              <div
+                class="hidden sm:flex md:flex lg:flex justify-between w-[10%] md:w-[16%] lg:w-[10%]"
+              >
                 <div
                   class="left px-3 py-2 rounded-full bg-white active:bg-[#299764] duration-200"
                 >
@@ -281,17 +355,17 @@
           </div>
           <div class="relative">
             <div
-              class="search-wrapper flex justify-between w-2/5 mx-auto absolute -top-8 p-1 z-20 bg-white rounded-full left-[30%]"
+              class="search-wrapper flex justify-between w-[90%] left-[5%] sm:w-4/5 md:w-2/3 lg:w-2/5 mx-auto absolute md:-top-8 -top-4 p-1 z-20 bg-white rounded-full md:left-[17%] lg:left-[30%]"
             >
               <input
                 type="text"
                 placeholder="Find the car of your dreams"
-                class="px-[30px] w-full focus:outline-none rounded-full text-black outline-none focus:ring-2 focus:ring-[#299764]"
+                class="placeholder:text-[16px] md:placeholder:text-base px-[30px] w-full focus:outline-none rounded-full text-black outline-none focus:ring-2 focus:ring-[#299764]"
               />
               <img
                 src="./images/Search.svg"
                 alt="search"
-                class="p-4 rounded-full bg-[#299764] hover:bg-[#077743] active:bg-[#f5f5f5] duration-300"
+                class="p-2 md:p-4 rounded-full bg-[#299764] hover:bg-[#077743] active:bg-[#f5f5f5] duration-300"
               />
             </div>
           </div>
@@ -303,36 +377,40 @@
           class="container mx-auto px-5 pt-[130px] pb-[160px] flex justify-center flex-col items-center min-h-[1200px]"
         >
           <div
-            class="tilles w-1/2 mx-auto flex flex-col gap-3 items-center pb-[40px]"
+            class="tilles w-5/6 text-center md:w-2/3 lg:w-1/2 mx-auto flex flex-col gap-3 items-center pb-[40px]"
           >
-            <h1 class="text-[36px] font-semibold">
+            <h1 class="text-[24px] md:text-[36px] font-semibold">
               Choose the car of your dreams
             </h1>
-            <p class="text-center text-[14px]">
+            <p class="text-center text-[12px] md:text-[14px]">
               We provide our customers with the most incredible driving
               emotions. That is why there are only world-class cars in our fleet
             </p>
           </div>
-          <div class="change-buttons flex w-[45%] justify-between mx-auto">
+          <div
+            class="text-[14px] md:text-base change-buttons flex w-[92%] md:w-[70%] lg:w-[45%] justify-between mx-auto"
+          >
             <button
-              class="btns compact py-3 px-8 border-[1px] border-[#333333] active rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
+              class="btns compact py-2 px-4 md:py-3 md:px-8 border-[1px] border-[#333333] active rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
             >
               Compact
             </button>
             <button
-              class="btns sport py-3 px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
+              class="btns sport py-2 px-4 md:py-3 md:px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
             >
               Sports cars
             </button>
             <button
-              class="btns van py-3 px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
+              class="btns van py-2 px-4 md:py-3 md:px-8 border-[1px] border-[#333333] rounded-full hover:bg-[#077743] hover:border-transparent hover:text-white active:bg-[#F5F5F5] active:text-black"
             >
               Vans
             </button>
           </div>
-          <div class="wrapper-cards pt-6 grid grid-cols-3 gap-10">
+          <div
+            class="wrapper-cards pt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-10 md:gap-4"
+          >
             <div
-              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white md:w-[387px] md:h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Ford Fiesta</h1>
@@ -389,7 +467,7 @@
               </div>
             </div>
             <div
-              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white md:w-[387px] md:h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Nissan Versa</h1>
@@ -446,7 +524,7 @@
               </div>
             </div>
             <div
-              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white md:w-[387px] md:h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Toyota Corolla</h1>
@@ -503,7 +581,7 @@
               </div>
             </div>
             <div
-              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white md:w-[387px] md:h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Nissan Rogue</h1>
@@ -560,7 +638,7 @@
               </div>
             </div>
             <div
-              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white md:w-[387px] md:h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Chevy Traverse</h1>
@@ -617,7 +695,7 @@
               </div>
             </div>
             <div
-              class="card hover:bg-[#299764] duration-300 text-white w-[387px] h-[433px] bg-[#272727] rounded-xl"
+              class="card hover:bg-[#299764] duration-300 text-white md:w-[387px] md:h-[433px] bg-[#272727] rounded-xl"
             >
               <div class="info-texts gap-2 flex flex-col px-6 py-4">
                 <h1 class="text-[24px] font-semibold">Nissan Altima</h1>
@@ -685,36 +763,47 @@
       <section class="bg-[#272727] comment-section">
         <div class="container mx-auto px-5">
           <div
-            class="wrapper py-[100px] flex justify-between overflow-x-hidden"
+            class="wrapper py-[100px] flex justify-between flex-col md:flex-col lg:flex-row overflow-x-hidden"
           >
             <div
-              class="community flex flex-col justify-between items-start p-[70px] h-[484px] w-3/5 bg-[#1C1C1C] rounded-l-[20px]"
+              class="community flex flex-col md:flex-row lg:flex-col w-full md:w-full justify-between items-start md:items-center lg:items-start p-[20px] md:p-[20px] lg:p-[70px] h-[384px] md:h-[220px] lg:h-[484px] w-3/5 bg-[#1C1C1C] md:rounded-t-[20px] lg:rounded-r-none lg:rounded-l-[20px] rounded-t-[20px]"
             >
-              <div class="flex gap-2">
-                <img src="./images/Google.svg" alt="google" />
-                <h1 class="text-[#4285F4]">From Google</h1>
+              <div class="lg:w-[80%]">
+                <div class="flex gap-2 md:w-[50%] lg:auto">
+                  <img src="./images/Google.svg" alt="google" />
+                  <h1 class="text-[#4285F4]">From Google</h1>
+                </div>
+                <h1 class="text-[38px]">Hear what the community is saying</h1>
               </div>
-              <h1 class="text-[38px]">Hear what the community is saying</h1>
-              <hr class="h-[2px] w-full cardhr" />
-              <h1 class="text-[14px]">More interesting reviews on Instagram</h1>
-              <div class="rounded-full">
-                <div
-                  class="gradient-border-mask rounded-full w-[194px] py-[18px] px-[50px] hover:text-white hover:bg-gradient-to-tr from-[#8B2AB2] via-[#8B2AB2] via-[#D22A8A] via-[#EE2A7B] to-[#F9ED32] duration-200"
-                >
-                  Instagram
+              <div>
+                <hr
+                  class="h-[2px] w-[300px] md:w-28 lg:w-96 md:rotate-90 cardhr lg:rotate-0"
+                />
+              </div>
+              <div class="flex flex-col gap-y-2 md:w-[50%] lg:w-auto">
+                <h1 class="text-[14px]">
+                  More interesting reviews on Instagram
+                </h1>
+                <div class="rounded-full">
+                  <div
+                    class="gradient-border-mask rounded-full w-[194px] py-[18px] px-[50px] hover:text-white hover:bg-gradient-to-tr from-[#8B2AB2] via-[#8B2AB2] via-[#D22A8A] via-[#EE2A7B] to-[#F9ED32] duration-200"
+                  >
+                    Instagram
+                  </div>
                 </div>
               </div>
             </div>
             <div
-              class="comments rounded-r-[20px] overflow-hidden bg-[#299764] w-full h-full flex flex-col justify-evenly"
+              class="comments rounded-b-[20px] md:rounded-b-[20px] lg:rounded-r-[20px] lg:rounded-b-none overflow-hidden bg-[#299764] w-full h-full flex flex-col justify-evenly"
             >
-              <div class="comments-wrapper swiper mySwiper2 w-[100%] h-[100%]"">
+              <div class="comments-wrapper swiper mySwiper2 h-[100%] md:w-[100%]
+              md:h-[100%]"">
               <div
-                class="swipper-wrap swiper-wrapper p-5 flex justify-start items-center text-white gap-x-5"
+                class="swipper-wrap swiper-wrapper p-2 md:p-5 flex justify-start items-center text-white gap-x-5"
               >
                 <div class="swip swiper-slide w-[420px] h-[100%]">
                   <div
-                    class="slide w-[420px] h-[333px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
+                    class="slide md:w-[420px] md:h-[333px] h-[380px] w-[326px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
                   >
                     <div class="flex justify-between">
                       <div class="flex justify-between w-2/3">
@@ -760,7 +849,7 @@
                 </div>
                 <div class="swip swiper-slide w-[420px] h-[100%]">
                   <div
-                    class="slide w-[420px] h-[333px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
+                    class="slide md:w-[420px] md:h-[333px] h-[380px] w-[326px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
                   >
                     <div class="flex justify-between">
                       <div class="flex justify-between w-2/3">
@@ -803,7 +892,7 @@
                 </div>
                 <div class="swip swiper-slide w-[420px] h-[100%]">
                   <div
-                    class="slide w-[420px] h-[333px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
+                    class="slide md:w-[420px] md:h-[333px] h-[380px] w-[326px] p-3 bg-[#1C1C1C] rounded-2xl flex flex-col justify-between"
                   >
                     <div class="flex justify-between">
                       <div class="flex justify-between w-2/3">
@@ -848,12 +937,12 @@
                 </div>
               </div>
               <div
-                class="indikators flex justify-around items-center p-1 h-20 w-full"
+                class="indikators flex md:justify-around justify-center items-center p-1 h-8 md:h-20 w-full"
               >
-                <div class="h-1 w-[70%] bg-neutral-400">
+                <div class="h-1 w-[95%] md:w-[70%] bg-neutral-400">
                   <div class="progress h-full w-1/3 bg-white"></div>
                 </div>
-                <div class="flex justify-between w-[18%]">
+                <div class="md:flex hidden justify-between w-[18%]">
                   <div
                     class="leftprev block px-3 py-2 rounded-full bg-white active:bg-[#299764] duration-200"
                   >
@@ -876,17 +965,39 @@
       </section>
       <!--  -->
       <section>
-        <div class="container mx-auto px-5 py-[160px]">
+        <div class="container mx-auto px-5 py-[100px] md:py-[160px]">
           <div
-            class="wrapper flex flex-col justify-between items-start min-h-[100px]"
+            class="wrapper flex flex-col justify-between items-start min-h-[100px] w-full overflow-hidden"
           >
             <h1 class="text-[24px]">More than 50 brands of cars</h1>
-            <div class="brands flex justify-between w-full px-2">
-              <img class="brand" src="./images/image 9.png" alt="" />
-              <img class="brand" src="./images/image 10.png" alt="" />
-              <img class="brand" src="./images/image 11.png" alt="" />
-              <img class="brand" src="./images/image 12.png" alt="" />
-              <img class="brand" src="./images/Group 2 1.png" alt="" />
+            <div
+              class="brands flex justify-between w-[800px] lg:w-full md:w-[1200px] md:px-2 gap-2"
+            >
+              <img
+                class="brand w-16 h-8 md:w-auto md:h-auto"
+                src="./images/image 9.png"
+                alt=""
+              />
+              <img
+                class="brand w-16 h-8 md:w-auto md:h-auto"
+                src="./images/image 10.png"
+                alt=""
+              />
+              <img
+                class="brand w-16 h-8 md:w-auto md:h-auto"
+                src="./images/image 11.png"
+                alt=""
+              />
+              <img
+                class="brand w-16 h-8 md:w-auto md:h-auto"
+                src="./images/image 12.png"
+                alt=""
+              />
+              <img
+                class="brand w-16 h-8 md:w-auto md:h-auto"
+                src="./images/Group 2 1.png"
+                alt=""
+              />
               <img
                 class="brand"
                 src="./images/volkswagen-vector-svg-3 3.png"
@@ -902,18 +1013,26 @@
           <div
             class="wrapper flex flex-col justify-between items-center min-h-[600px]"
           >
-            <h1 class="text-[36px]">Unparalleled service</h1>
-            <p class="w-1/2 text-[16px] text-center">
+            <h1 class="text-[24px] md:text-[36px] font-semibold">
+              Unparalleled service
+            </h1>
+            <p
+              class="lg:w-1/2 md:w-3/4 text-[12px] md:text-[16px] pb-4 md:pb-0 text-center"
+            >
               Whether you are looking for Newark Airport car rental, an
               insurance replacement vehicle or minivan to take on vacation Car
               rental has it all.
             </p>
-            <div class="wrapper-cardds grid grid-cols-2 gap-4">
+            <div
+              class="wrapper-cardds grid gap-2 grid-cols-1 md:grid-cols-2 lg:gap-4 md:gap-3"
+            >
               <div
-                class="cardd w-[590px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764] hover:text-white"
+                class="cardd lg:w-[590px] md:w-[380px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764] hover:text-white"
               >
                 <div class="flex justify-between items-center leading-7">
-                  <h1 class="w-3/5 text-[32px]">Book online pay online</h1>
+                  <h1 class="lg:w-3/5 md:w-4/6 text-[32px]">
+                    Book online pay online
+                  </h1>
                   <svg
                     width="60"
                     height="60"
@@ -929,15 +1048,17 @@
                     />
                   </svg>
                 </div>
-                <p class="text-[16px] w-3/5">
+                <p class="text-[16px] lg:w-3/5 md:4/5">
                   Complete the booking process A-Z, with our easy online system
                 </p>
               </div>
               <div
-                class="cardd w-[590px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764] hover:text-white"
+                class="cardd lg:w-[590px] md:w-[380px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764] hover:text-white"
               >
                 <div class="flex justify-between items-center leading-7">
-                  <h1 class="w-3/5 text-[32px]">Guaranteed car reservation</h1>
+                  <h1 class="lg:w-3/5 md:4/6 text-[32px]">
+                    Guaranteed car reservation
+                  </h1>
                   <svg
                     width="60"
                     height="60"
@@ -951,16 +1072,16 @@
                     />
                   </svg>
                 </div>
-                <p class="text-[16px] w-3/5">
+                <p class="text-[16px] lg:w-3/5 md:w-4/5">
                   When you book with Car rental, you can be confident your car
                   will be waiting for you
                 </p>
               </div>
               <div
-                class="cardd w-[590px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764] hover:text-white"
+                class="cardd lg:w-[590px] md:w-[380px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764] hover:text-white"
               >
                 <div class="flex justify-between items-center leading-7">
-                  <h1 class="w-3/5 text-[32px]">
+                  <h1 class="lg:w-3/5 md:w-4/6 text-[32px]">
                     Unparalleled customer service
                   </h1>
                   <svg
@@ -990,16 +1111,16 @@
                     />
                   </svg>
                 </div>
-                <p class="text-[16px] w-3/5">
+                <p class="text-[16px] lg:w-3/5 md:4/5">
                   We're here to help. We pride ourselves in our customer service
                 </p>
               </div>
               <div
-                class="cardd w-[590px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764] hover:text-white"
+                class="cardd lg:w-[590px] md:w-[380px] h-[216px] pl-8 py-8 flex flex-col justify-between rounded-[20px] px-8 bg-[#272727] hover:bg-[#299764] hover:text-white"
               >
                 <div class="flex justify-between items-center leading-7">
-                  <h1 class="w-3/5 text-[32px]">
-                    No reservation or  booking fees
+                  <h1 class="lg:w-3/5 md:w-5/6 text-[32px]">
+                    No reservation or booking fees
                   </h1>
                   <svg
                     width="60"
@@ -1020,7 +1141,7 @@
                     />
                   </svg>
                 </div>
-                <p class="text-[16px] w-3/5">
+                <p class="text-[14px] lg:w-3/5 md:4/5">
                   No cancellation fees if cancelled 24 hours prior to booking
                   time
                 </p>
@@ -1033,14 +1154,18 @@
       <section>
         <div class="container mx-auto px-5 pb-[160px]">
           <div
-            class="keep-wrapper flex justify-between border-[#333333] border-[2px] rounded-[20px] min-h-[500px]"
+            class="keep-wrapper flex justify-between border-[#333333] overflow-hidden border-[2px] rounded-[20px] min-h-[500px]"
           >
-            <div class="info flex flex-col w-3/5 justify-between p-8">
-              <div class="flex flex-col justify-between">
-                <h1 class="text-[36px] font-semibold">
+            <div
+              class="info flex flex-col w-full md:w-3/5 justify-between p-3 lg:p-8 md:p-4 overflow-hidden"
+            >
+              <div class="flex flex-col justify-between gap-2 md:gap-0">
+                <h1
+                  class="w-3/5 md:w-auto text-[24px] md:text-[36px] font-medium"
+                >
                   Car rental keeps you safe
                 </h1>
-                <p class="text-[16px] font-light">
+                <p class="text-[16px] font-light md:w-[90%] lg:w-full">
                   The safety of our employees and renters is our number one
                   priority. In addition to being confident your vehicle is
                   cleaned and sanitized every time you rent, you can also feel
@@ -1049,9 +1174,11 @@
                   operations.
                 </p>
               </div>
-              <div class="elems flex justify-between items-center">
+              <div
+                class="elems gap-2 md:gap-1 flex flex-col md:flex-row justify-between items-center"
+              >
                 <div
-                  class="safe flex flex-col justify-between p-4 w-[200px] h-[160px] bg-[#272727] rounded-2xl hover:bg-[#299764] hover:text-white"
+                  class="safe flex flex-col justify-between p-3 lg:p-4 md:p-3 w-[318px] h-[128px] lg:w-[200px] md:w-[140px] lg:h-[160px] md:h-[165px] bg-[#272727] rounded-2xl hover:bg-[#299764] hover:text-white"
                 >
                   <div class="mr-0 ml-auto">
                     <svg
@@ -1074,7 +1201,7 @@
                   </p>
                 </div>
                 <div
-                  class="safe flex flex-col justify-between p-4 w-[200px] h-[160px] bg-[#272727] rounded-2xl hover:bg-[#299764] hover:text-white"
+                  class="safe flex flex-col justify-between lg:p-4 md:p-3 p-3 w-[318px] h-[128px] lg:w-[200px] md:w-[140px] lg:h-[160px] md:h-[165px] bg-[#272727] rounded-2xl hover:bg-[#299764] hover:text-white"
                 >
                   <div class="mr-0 ml-auto">
                     <svg
@@ -1097,7 +1224,7 @@
                   <p class="text-[16px]">All of our employees wear masks</p>
                 </div>
                 <div
-                  class="safe flex flex-col justify-between p-4 w-[200px] h-[160px] bg-[#272727] rounded-2xl hover:bg-[#299764] hover:text-white"
+                  class="safe flex flex-col justify-between p-3 w-[318px] h-[128px] lg:p-4 md:p-3 lg:w-[200px] md:w-[140px] lg:h-[160px] md:h-[165px] bg-[#272727] rounded-2xl hover:bg-[#299764] hover:text-white"
                 >
                   <div class="mr-0 ml-auto">
                     <svg
@@ -1127,10 +1254,10 @@
             </div>
             <div class="relative">
               <div
-                class="absolute p-[150px] bg-[#299764] rounded-full -z-10 left-10 top-4"
+                class="absolute p-[60px] md:p-[150px] bg-[#299764] rounded-full -z-10 -left-14 -top-9 lg:left-10 md:left-0 md:top-4"
               ></div>
               <img
-                class="h-full pt-10 pr-10"
+                class="h-full pt-10 hidden md:block lg:pr-10 md:pr-2"
                 src="./images/wepik--2022427-105555-removebg-preview 1.png"
                 alt=""
               />
@@ -1141,11 +1268,15 @@
     </main>
     <footer class="border-t-2 border-[#333333] min-h-[406px]">
       <div class="container mx-auto px-5">
-        <div class="wrapper py-8 flex justify-between text-[16px]">
-          <div class="footerinfo flex gap-[86px] w-1/4 flex-col">
+        <div
+          class="wrapper py-8 flex flex-col md:flex-col gap-4 md:gap-6 lg:gap-0 lg:flex-row justify-between text-[16px]"
+        >
+          <div
+            class="footerinfo flex lg:gap-[86px] items-center md:justify-between md:items-center lg:items-stretch lg:w-1/4 md:w-full lg:flex-col"
+          >
             <div class="flex flex-col gap-2">
               <img src="./images/Logo.svg" class="w-[150px]" alt="" />
-              <p class="text-[12px]">
+              <p class="text-[10px] md:text-[12px] md:w-[260px]">
                 Car rental offers a wide range of cars available for rent in
                 Newark EWR Airport NJ. We pride ourselves in our customer
                 service, and hassle-free renting experience.
@@ -1158,26 +1289,28 @@
 
           <!--  -->
           <div class="bottom flex flex-col w-[70%] justify-start">
-            <div class="flex justify-between pb-2">
-              <ul class="flex flex-col gap-2">
+            <div
+              class="flex-wrap w-[340px] gap-y-5 md-gap-y-0 md:gap-0 flex justify-between pb-2 md:w-[768px] lg:w-auto"
+            >
+              <ul class="flex flex-col gap-2 w-[50%] md:w-auto">
                 <h1>Main</h1>
                 <li><a href="#">My Bookings</a></li>
                 <li><a href="#">Reservation</a></li>
               </ul>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col gap-2 w-[50%] md:w-auto">
                 <h1>Categories</h1>
                 <li><a href="#">Compact</a></li>
                 <li><a href="#">Sports cars</a></li>
                 <li><a href="#">Vans</a></li>
               </ul>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col gap-2 w-[50%] md:w-auto">
                 <h1>Company</h1>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Careers</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Contact us</a></li>
               </ul>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col gap-2 w-[50%] md:w-auto">
                 <h1>Our locations</h1>
                 <li><a href="#">2118 Thornridge Cir. Syracuse</a></li>
                 <li><a href="#">2118 Thornridge Cir. Syracuse</a></li>
@@ -1185,20 +1318,22 @@
               </ul>
             </div>
 
-            <hr class="py-2" />
+            <hr class="w-[340px] py-2 md:w-[768px] lg:w-auto" />
 
-            <div class="flex justify-between">
-              <ul class="flex flex-col gap-2">
+            <div
+              class="flex-wrap w-[340px] gap-y-6 md-gap-y-0 flex justify-between md:w-[750px] lg:w-auto"
+            >
+              <ul class="flex flex-col gap-2 w-[50%] md:w-auto">
                 <h1>Contact</h1>
                 <li><a href="#">+1 855 420 0000</a></li>
                 <li><a href="#">carrental@gmail.com</a></li>
               </ul>
-              <ul class="flex flex-col gap-2">
+              <ul class="flex flex-col gap-2 w-[50%] md:w-auto">
                 <h1>House of operation</h1>
                 <li><a href="#">8:00 - 21:00 Mon-Sat </a></li>
                 <li><a href="#">9:00 - 15:00 Sundays</a></li>
               </ul>
-              <ul class="flex flex-col gap-2 w-[28%]">
+              <ul class="flex flex-col gap-2 w-[62%] md:w-[28%]">
                 <h1>Social network</h1>
                 <li class="flex justify-between">
                   <div
@@ -1260,7 +1395,7 @@
         nextEl: ".rightnext",
         prevEl: ".leftprev",
       },
-      slidesPerView: 1.4,
+      slidesPerView: 1.1,
       spaceBetween: 10,
     });
   </script>
