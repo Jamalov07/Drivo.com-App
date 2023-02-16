@@ -139,6 +139,34 @@ let cardds = document.querySelectorAll(".cardd");
 let keepWrapper = document.querySelector(".keep-wrapper");
 let safeCars = document.querySelectorAll(".safe");
 let icons = document.querySelectorAll(".icon");
+let brands = document.querySelectorAll(".brand");
+
+let brandsInLight = [
+  {
+    src: "./images/image 9.svg",
+    cur: "./images/image 9.png",
+  },
+  {
+    src: "./images/image 10.svg",
+    cur: "./images/image 10.png",
+  },
+  {
+    src: "./images/image 11.svg",
+    cur: "./images/image 11.png",
+  },
+  {
+    src: "./images/image 12.svg",
+    cur: "./images/image 12.png",
+  },
+  {
+    src: "./images/Group 2 1.svg",
+    cur: "./images/Group 2 1.png",
+  },
+  {
+    src: "./images/volkswagen-vector-svg-3 3.svg",
+    cur: "./images/volkswagen-vector-svg-3 3.png",
+  },
+];
 
 theme.addEventListener("click", () => {
   changeTheme();
@@ -165,6 +193,7 @@ function changeTheme() {
   });
   let cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
+    card.classList.toggle("choosecard");
     card.classList.toggle("bg-[#272727]");
     card.classList.toggle("text-black");
     card.classList.toggle("bg-[#F5F5F5]");
@@ -198,6 +227,11 @@ function changeTheme() {
   safeCars.forEach((card) => {
     card.classList.toggle("bg-[#272727]");
     card.classList.toggle("bg-[#F5F5F5]");
+    if (document.body.classList.contains("text-white")) {
+      card.classList.remove("safeblack");
+    } else {
+      card.classList.add("safeblack");
+    }
   });
   icons.forEach((icon) => {
     icon.classList.toggle("bg-white");
@@ -205,6 +239,19 @@ function changeTheme() {
     icon.classList.toggle("text-black");
     icon.classList.toggle("text-white");
   });
+
+  if (document.body.classList.contains("text-white")) {
+    brands.forEach((brand, index) => {
+      brand.src = brandsInLight[index].cur;
+    });
+  } else {
+    brands.forEach((brand, index) => {
+      brand.src = brandsInLight[index].src;
+    });
+  }
+
+  if (document.body.classList.contains("text-white")) {
+  }
 }
 
 let themeInLocalStorage = localStorage.getItem("theme");
@@ -272,12 +319,12 @@ aboutFirstDiv.addEventListener("click", () => {
 });
 
 // aboutUs.addEventListener("mouseover", () => {
-//   let options = aboutUs.querySelector("div");
+//   let options = aboutUs.querySelector(".options");
 //   options.classList.remove("hidden");
 // });
 
 // aboutUs.addEventListener("mouseout", () => {
-//   let options = aboutUs.querySelector("div");
+//   let options = aboutUs.querySelector(".options");
 //   options.classList.add("hidden");
 // });
 
@@ -290,12 +337,12 @@ helpFirstDiv.addEventListener("click", () => {
 });
 
 // helpCenter.addEventListener("mouseover", () => {
-//   let options = helpCenter.querySelector("div");
+//   let options = helpCenter.querySelector(".options");
 //   options.classList.remove("hidden");
 // });
 
 // helpCenter.addEventListener("mouseout", () => {
-//   let options = helpCenter.querySelector("div");
+//   let options = helpCenter.querySelector(".options");
 //   options.classList.add("hidden");
 // });
 
@@ -555,5 +602,64 @@ function createCar(car) {
 let all = document.querySelector(".all");
 
 all.addEventListener("click", () => {
+  vanBtn.classList.remove("active");
+  compactBtn.classList.remove("active");
+  sportBtn.classList.remove("active");
   renderCar(cars);
+});
+
+// wrapperCards.addEventListener("mouseover", (e) => {
+//   console.log(e.target);
+// });
+
+cards.forEach((card) => {
+  card.addEventListener("mouseover", (e) => {
+    if (!document.body.classList.contains("text-white")) {
+      card.classList.remove("text-black");
+      card.classList.remove("choosecard");
+    }
+  });
+
+  card.addEventListener("mouseout", (e) => {
+    if (!document.body.classList.contains("text-white")) {
+      card.classList.add("text-black");
+      card.classList.add("choosecard");
+    }
+  });
+});
+
+let prev = document.querySelector(".leftprev");
+let next = document.querySelector(".rightnext");
+let progress = document.querySelector(".progress");
+
+prev.addEventListener("click", (e) => {
+  if (progress.classList.contains("ml-[33.3%]")) {
+    progress.classList.remove("ml-[33.3%]");
+  }
+  if (progress.classList.contains("ml-[66.6%]")) {
+    progress.classList.remove("ml-[66.6%]");
+    progress.classList.add("ml-[33.3%]");
+  }
+});
+
+next.addEventListener("click", () => {
+  if (!progress.classList.contains("ml-[33.3%]")) {
+    progress.classList.add("ml-[33.3%]");
+  } else if (progress.classList.contains("ml-[33.3%]")) {
+    progress.classList.add("ml-[66.6%]");
+  }
+});
+
+safeCars.forEach((safe) => {
+  safe.addEventListener("mouseover", () => {
+    if (!document.body.classList.contains("text-white")) {
+      safe.classList.toggle("safeblack");
+    }
+  });
+
+  safe.addEventListener("mouseout", () => {
+    if (!document.body.classList.contains("text-white")) {
+      safe.classList.toggle("safeblack");
+    }
+  });
 });

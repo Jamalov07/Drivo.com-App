@@ -114,3 +114,31 @@
   background-color: #077743;
 }
 
+.cardd:hover svg > path {
+  fill: white;
+}
+
+.safeblack > div > svg > path {
+  fill: black;
+}
+
+.choosecard > div > div > svg > path {
+  fill: black;
+}
+
+.instagram:hover {
+  background: radial-gradient(
+    230.93% 230.93% at 102.01% 2.03%,
+    #f9ed32 0%,
+    #ee2a7b 36%,
+    #d22a8a 44%,
+    #8b2ab2 60%,
+    #1b2af0 83%,
+    #002aff 88%
+  );
+  color: white;
+}
+
+.totop:active svg > path {
+  fill: black;
+}
